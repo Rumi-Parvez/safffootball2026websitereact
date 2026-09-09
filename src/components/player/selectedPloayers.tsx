@@ -13,7 +13,7 @@ export function SelectedPloayers({selectedPlayer , setSelectedPlayer}:SelecterPr
     
 
     const deletMessage = ()=>{
-        toast.success(` Tt Has Succsesfully Removed`);
+        toast.error(` Tt Has Succsesfully Removed`);
     }
     const handledelet = (player: playerType) => {
         
