@@ -2,6 +2,7 @@ import type { Dispatch, SetStateAction } from "react"
 import type { playerType } from "../../type"
 import { RiDeleteBin6Fill } from "react-icons/ri"
 import { BiSolidMessageAltError } from "react-icons/bi"
+import { toast } from "react-toastify"
 
 interface SelecterProps {
     selectedPlayer : playerType[]
@@ -10,9 +11,16 @@ interface SelecterProps {
 
 export function SelectedPloayers({selectedPlayer , setSelectedPlayer}:SelecterProps) {
     
+
+    const deletMessage = ()=>{
+        toast.success(` Tt Has Succsesfully Removed`);
+    }
     const handledelet = (player: playerType) => {
+        
         const result = selectedPlayer.filter(selected => selected.id !== player.id)
         setSelectedPlayer(result)
+
+        
     
     }
     
@@ -33,7 +41,7 @@ export function SelectedPloayers({selectedPlayer , setSelectedPlayer}:SelecterPr
                                     <div>
                                         <h1 className="font-bold  mt-2 ">{player.name}</h1>
                                         <p className="flex justify-between gap-4 items-center">{player.position}     <strong>{player.rating}</strong></p>
-                                        <button className="btn btn-active btn-error mt-3 px-10  bg-red-500 border-1 border-rose-900 text-white " onClick={()=>handledelet(player)}><RiDeleteBin6Fill /></button>
+                                        <button className="btn btn-active btn-error mt-3 px-10  bg-red-500 border-1 border-rose-900 text-white " onClick={() => { handledelet(player); deletMessage(); }} ><RiDeleteBin6Fill /></button>
 
                                     </div>
                                 </div>

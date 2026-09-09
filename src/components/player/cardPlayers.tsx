@@ -26,7 +26,7 @@ export function CardPlayers({player, coin  , SetCoin , selectedPlayer , setSelec
             
         }
         else{
-            toast.error(`You don't have enough balance! Your current balance is ${newCoin} `);
+            toast.error(`You don't have enough balance! Your current balance is ${coin} `);
         }
         
 

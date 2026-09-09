@@ -17,7 +17,7 @@ const playerDataPermisson = async  (): Promise<playerType[]> =>{
 
 function App() {
   const [plyerPromise] = useState(()=> playerDataPermisson());
-const [coin , SetCoin] = useState<number>(100000)
+const [coin , SetCoin] = useState<number>(9057802)
   return (
     <>
     <div>
