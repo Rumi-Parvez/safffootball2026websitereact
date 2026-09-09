@@ -1,4 +1,4 @@
-import hero from "../assets/hero.png.jpg"
+import hero from "../assets/bannerad.png.jpg"
 
 export function Hero() {
     
@@ -6,8 +6,9 @@ export function Hero() {
         <>
         <div>
 
-        <img src={hero} alt="" />
-
+        <div className="h-700px]  m-auto  container">
+            <img className="h-full w-full" src={hero} alt="" />
+        </div>
         </div>
         </>
     ) 
