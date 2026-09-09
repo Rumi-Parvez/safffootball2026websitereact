@@ -2,7 +2,7 @@ import { FaDollarSign, FaUser } from "react-icons/fa";
 import type { playerType } from "../../type";
 import { IoFlagSharp } from "react-icons/io5";
 import { useState, type Dispatch, type SetStateAction } from "react";
-import { toast } from "react-toastify/unstyled";
+import { toast } from "react-toastify";
 
 
 interface singleplayersprops {
@@ -26,7 +26,7 @@ export function CardPlayers({player, coin  , SetCoin , selectedPlayer , setSelec
             
         }
         else{
-            toast(`You don't have enguph ballenche`);
+            toast.error(`You don't have enough balance! Your current balance is ${newCoin} `);
         }
         
 

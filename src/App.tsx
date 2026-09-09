@@ -7,6 +7,7 @@ import { Hero } from './components/hero';
 import { Footer } from './components/footer';
 import { Team } from './components/team';
 import { DiVim } from 'react-icons/di';
+import { ToastContainer } from 'react-toastify';
 
 const playerDataPermisson = async  (): Promise<playerType[]> =>{
   const res = await fetch("/public/playersData.json");
@@ -16,7 +17,7 @@ const playerDataPermisson = async  (): Promise<playerType[]> =>{
 
 function App() {
   const [plyerPromise] = useState(()=> playerDataPermisson());
-const [coin , SetCoin] = useState<number>(10000000)
+const [coin , SetCoin] = useState<number>(100000)
   return (
     <>
     <div>
@@ -213,6 +214,12 @@ const [coin , SetCoin] = useState<number>(10000000)
 
 
     </div>
+
+
+
+
+
+    <ToastContainer />
     </>
   )
  
